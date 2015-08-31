@@ -1,0 +1,30 @@
+h1
+  | Job boards
+br
+  =link_to "Search", new_job_path
+br
+
+table class="table table-hover"
+  thead  
+    tr  
+      th
+        |Title
+      th
+        |Location
+      th
+        |Company
+      th
+        |Category
+  tbody
+  -@jobs.each do |j|
+    tr  
+      td
+        =j.title
+      td
+        =j.location
+      td
+        =j.company
+      td
+        =j.category
+end
+
