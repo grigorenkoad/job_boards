@@ -17,7 +17,13 @@
   margin-top: 50px;
   text-align: center;
 }
-
+.form-group {
+  float:left;
+}
+.but {
+  float: right;
+  margin-top: 25px;
+}
 body {
   width: 80%;
   margin: auto;

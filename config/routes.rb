@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   resources :jobs
 
-  post 'jobs/found', to: 'jobs#found'
+  post 'filter', to: 'jobs#filter', as: 'filter'
 end

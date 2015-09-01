@@ -1,8 +1,18 @@
 h1
   | Job boards
-br
-  =link_to "Search", new_job_path
-br
+
+=simple_form_for :job, url: {:action => :filter}, :html => {class: "form"} do |f|
+  .form-group
+    =f.input :title
+  .form-group
+    =f.input :location
+  .form-group  
+    =f.input :company
+  .form-group  
+    =f.input :category
+  .but
+    =f.submit "Search", :class => "btn btn-info"
+end
 
 table class="table table-hover"
   thead  
