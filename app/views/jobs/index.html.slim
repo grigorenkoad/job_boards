@@ -1,7 +1,7 @@
 h1
   | Job boards
 
-=simple_form_for :job, url: {:action => :filter}, :html => {class: "form"} do |f|
+=simple_form_for :job, url: {action: 'filter'}, html: {class: "form"} do |f|
   .form-group
     =f.input :title
   .form-group
@@ -18,6 +18,8 @@ table class="table table-hover"
   thead  
     tr  
       th
+        |Req_#
+      th
         |Title
       th
         |Location
@@ -25,16 +27,22 @@ table class="table table-hover"
         |Company
       th
         |Category
+      th
+        |Posted date
   tbody
   -@jobs.each do |j|
     tr  
       td
-        =j.title
+        =j.req_num
+      td
+        =link_to j.title, j.url
       td
         =j.location
       td
         =j.company
       td
         =j.category
+      td
+        =j.posted_at
 end
 
