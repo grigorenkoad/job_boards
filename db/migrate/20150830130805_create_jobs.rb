@@ -6,6 +6,9 @@ class CreateJobs < ActiveRecord::Migration
       t.string :description
       t.string :company
       t.string :category
+      t.string :url
+      t.integer :req_num
+      t.datetime :posted_at
 
       t.timestamps null: false
     end
