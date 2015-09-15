@@ -3,6 +3,7 @@ class JobsController < ApplicationController
   include JobsHelper
   
   def index
+    @count = Job.count
     @jobs = filter_jobs(Job.all, params)
   end
   
