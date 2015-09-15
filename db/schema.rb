@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20150830130805) do
     t.string   "company"
     t.string   "category"
     t.string   "url"
-    t.integer  "req_num"
+    t.string   "req_num"
     t.datetime "posted_at"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
