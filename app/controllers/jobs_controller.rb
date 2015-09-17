@@ -1,6 +1,7 @@
 class JobsController < ApplicationController
   
   include JobsHelper
+
   
   def index
     @count = Job.count
